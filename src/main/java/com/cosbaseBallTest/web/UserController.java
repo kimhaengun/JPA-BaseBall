@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cosbaseBallTest.domain.user.User;
 import com.cosbaseBallTest.service.UserService;
 import com.cosbaseBallTest.web.dto.CMRespDto;
+import com.cosbaseBallTest.web.dto.UserPositionRespDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -44,6 +45,14 @@ public class UserController {
 		List<User> users = userService.선수목록();
 		model.addAttribute("users", users);
 		return "list/userlist";
+	}
+	
+	@GetMapping("/position/listForm")
+	public String positionlist(Model model) {
+		List<UserPositionRespDto> dtos = userService.포지션선수리스트();
+		model.addAttribute("dtos", dtos);
+		System.out.println("dtos : "+dtos);
+		return "list/positionlist";
 	}
 	
 	@DeleteMapping("/user/{id}")

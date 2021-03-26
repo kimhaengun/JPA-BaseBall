@@ -27,6 +27,6 @@ a {
 		<a href="/stadium/listForm">야구장 목록</a> 
 		<a href="/team/listForm">팀 목록</a> 
 		<a href="/user/listForm">선수목록</a> 
-		<a href="#">포지션 목록</a>
+		<a href="/position/listForm">포지션 목록</a>
 	</div>
 	<hr/>
