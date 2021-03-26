@@ -32,7 +32,7 @@ public class StadiumController {
 	public String join(Stadium stadium) {
 		stadiumService.구장등록(stadium);
 		return "redirect:/";
-	}
+	}  
 	
 	@GetMapping("/stadium/listForm")
 	public String listForm(Model model) {

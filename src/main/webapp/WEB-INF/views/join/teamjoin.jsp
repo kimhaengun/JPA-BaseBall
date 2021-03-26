@@ -5,7 +5,6 @@
 		<h3>팀 등록 페이지</h3>
 		<input type="text" name="teamname" placeholder="팀 이름" /> 
 		<input type="text" name="stadium" placeholder="구장 Id" /> 
-		<input type="text" name="user" placeholder="선수 Id" />
 		<button>등록</button>
 	</form>
 </div>

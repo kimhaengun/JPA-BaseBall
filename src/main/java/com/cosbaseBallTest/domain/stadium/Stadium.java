@@ -3,6 +3,7 @@ package com.cosbaseBallTest.domain.stadium;
 import java.sql.Timestamp;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,7 +31,8 @@ public class Stadium {
 	   private Integer id;
 	   private String stadiumname;
 	   
-	   @OneToOne
-	   @JoinColumn(name="teamId")
+	   @OneToOne(mappedBy = "stadium",cascade = CascadeType.REMOVE)
+	   //스타디움을 삭제하면 팀을 삭제하겠다. / 부모를 삭제하면 자식이 삭제됨.
+	   //삭제시 연관된 데이터도 함께 삭제됨.
 	   private Team team; 
 }

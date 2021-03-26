@@ -2,6 +2,7 @@ package com.cosbaseBallTest.domain.team;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,10 +31,10 @@ public class Team {
 	private Integer id;
 	private String teamname;
 	
-	@OneToOne
-	@JoinColumn(name = "stadiumId")
+	@OneToOne(cascade = CascadeType.DETACH)
+	 @JoinColumn(name="stadiumId")
 	private Stadium stadium;
 	
-	@OneToMany(mappedBy = "team")
-	private List<User> user;
+//	@OneToMany(mappedBy = "team")
+//	private List<User> user;
 }

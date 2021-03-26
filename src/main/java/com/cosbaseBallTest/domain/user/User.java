@@ -28,7 +28,7 @@ public class User {
 	   private String position;
 	   
 	   @ManyToOne
-	   @JoinColumn(name="userId")
+	   @JoinColumn(name="teamId")
 	   private Team team;
 	   
 }
